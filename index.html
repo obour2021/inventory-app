@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+</head>
+<body onload="displayData()" id="main-body">
+    <div class="container">
+        <div id="sidebar" class="mySidebar">
+            <a  onclick= "updateCategory (this)" id="try" href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a>
+            <a onclick="addBtn(this)" href="add.html"><i class="zmdi zmdi-collection-plus"></i> Add Item</a>
+            <a href="quantity.html"><i class="zmdi zmdi-view-list-alt"></i> Quanity</a>
+            <!-- <a href="details.html"><i class="zmdi zmdi-apps"></i> Details</a> -->
+            <a href="remove.html"><i class="zmdi zmdi-delete"></i> Remove item</a>
+            <a href=""><i class="zmdi zmdi-account"></i> Profile</a>
+            <a href=""><i class="zmdi zmdi-settings"></i> Setting</a>
+        </div>
+        <div id="dashboard" class="navigation">
+            <div>
+         <h2><i class="zmdi  zmdi-view-dashboard" id="home"></i> Admin Dashboard</h2>
+            <form class="search" action="">
+                <input class= "searchBtn" type="text" placeholder="Search...." name="search">
+                <button class="searchBtn" type="submit"><i class="zmdi zmdi-search"></i></button>
+            </form>  
+            <img src="obour.png" alt="admin image"> 
+            </div>
+        </div>
+        <div class="categories">
+              
+              <div class="items" id="desktop">
+                <div class="img"><img src="images/desktop-icon.png" alt=""></div>
+                 <h3 class="quantity-number">40</h3>
+                  <p class="category-name">Desktop</p>
+                </div>
+            <div class="items" id="laptop"> 
+                <div class="img"><img src="images/Laptop-icon.png" alt=""></div>
+                <h3 class="quantity-number">33</h3>
+                <p class="category-name">Laptop</p>
+            </div>
+              <div class="items" id="tablet">
+                <div class="img"><img src="images/tablet-icon.png" alt=""></div>
+                  <h3 class="quantity-number">58</h3>
+                  <p class="category-name">Tablet</p>
+                </div>
+              <div class="items" id="printer">
+                <div class="img"><img src="images/Devices-printer-icon.png" alt=""></div>
+                  <h3 class="quantity-number">51</h3>
+                  <p class="category-name">Printer</p>
+                </div>
+                  
+          <h3 id="tittle">Inventory Summary</h3>
+        </div>
+      
+        <div class="store-data">
+            <table id="store" >
+                <thead>
+                    <th>ID</th>
+                    <th>Item</th >
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Status</th> 
+                </thead> 
+                <tbody>
+
+                </tbody>
+            </table>
+     </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

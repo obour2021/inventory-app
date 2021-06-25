@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+</head>
+<body onload="populateComboBox('updateCategory')">
+    <div id="sidebar" class="mySidebar">
+        <a  onclick= "updateCategory (this)" id="try" href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a>
+        <a onclick="addBtn(this)" href="add.html"><i class="zmdi zmdi-collection-plus"></i> Add Item</a>
+        <a href="quantity.html"><i class="zmdi zmdi-view-list-alt"></i> Quanity</a>
+        <!-- <a href="details.html"><i class="zmdi zmdi-apps"></i> Details</a> -->
+        <a href="remove.html"><i class="zmdi zmdi-delete"></i> Remove item</a>
+        <a href=""><i class="zmdi zmdi-account"></i> Profile</a>
+        <a href=""><i class="zmdi zmdi-settings"></i> Setting</a>
+    </div>
+    <div id="dashboard" class="navigation">
+        <div>
+            <h2>Update Quantity or Stock</h2>
+            <img src="obour.png" alt="admin image"> 
+        </div>
+    </div>
+    <div class="update">
+        <label for="">Item: </label>
+        <input type="text" id="input1">
+        <label for="">Category: </label>
+        <select name="" id="updateCategory"></select>
+        <label for="">Quantity: </label>
+        <input type="text" id="input2">
+        <button class="btn btn-add">Update</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Item</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+</head>
+<body onload="populateComboBox('itemCategoriesHolder')">
+    <div id="sidebar" class="mySidebar">
+        <a  onclick= "updateCategory (this)" id="try" href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a>
+        <a onclick="addBtn(this)" href="add.html"><i class="zmdi zmdi-collection-plus"></i> Add Item</a>
+        <a href="quantity.html"><i class="zmdi zmdi-view-list-alt"></i> Quanity</a>
+        <!-- <a href="details.html"><i class="zmdi zmdi-apps"></i> Details</a> -->
+        <a href="remove.html"><i class="zmdi zmdi-delete"></i> Remove item</a>
+        <a href=""><i class="zmdi zmdi-account"></i> Profile</a>
+        <a href=""><i class="zmdi zmdi-settings"></i> Setting</a>
+    </div>
+    <div id="dashboard" class="navigation">
+        <div>
+            <h2>Choose Category to Remove Item</h2>
+        <img src="obour.png" alt="admin image"> 
+        </div>
+    </div>
+            <div class="deleteSection">
+                <label for="">Quanity</label>
+                <input type="text">
+                <select name="" onchange="removeItem(this)" id="itemCategoriesHolder">
+
+                </select>
+                <button onclick="removeItem(this)" class="btn btn-cancel">Remove</button>
+            </div>
+
+    <div class="store-data">
+        <table  >
+            <thead>
+                <th></th>
+                <th>Item</th>
+                <th></th> 
+                <th>Quantity</th>
+                <th></th>
+            </thead> 
+            <table id="remove-from-store">
+                <tbody >
+
+                </tbody>
+            </table>
+            
+        </table>
+ </div>
+    <script src="script.js"></script>
+</body>
+</html>
